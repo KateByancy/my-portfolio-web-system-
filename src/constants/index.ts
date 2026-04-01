@@ -1,4 +1,3 @@
-// src/constants/index.ts
 
 export const EDUCATION = [
   { title: "BS in Information Technology", school: "Cordova Public College", year: "2023 - 2027" },

@@ -13,11 +13,11 @@ export default function ProjectSection() {
             
             {/* Project Image Container */}
             <div className="aspect-video bg-slate-100 dark:bg-slate-800 relative overflow-hidden border-b border-slate-50 dark:border-slate-800">
-              <image> 
+              <img 
                 src={project.image} 
                 alt={project.title}
-                className=&quot;object-cover w-full h-full transition-transform duration-500 group-hover:scale-110&quot;
-              </image>
+                className={"object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"}
+              />
               <div className="absolute inset-0 bg-[#001F3F] opacity-0 group-hover:opacity-20 transition-opacity" />
             </div>
 
