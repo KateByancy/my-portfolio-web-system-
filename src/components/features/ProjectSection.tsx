@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { PROJECTS } from "@/constants";
+import Image from "next/image";
 
 export default function ProjectSection() {
   return (
@@ -13,10 +14,13 @@ export default function ProjectSection() {
             
             {/* Project Image Container */}
             <div className="aspect-video bg-slate-100 dark:bg-slate-800 relative overflow-hidden border-b border-slate-50 dark:border-slate-800">
-              <img 
+              
+              <Image 
                 src={project.image} 
                 alt={project.title}
-                className={"object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 300px"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-[#001F3F] opacity-0 group-hover:opacity-20 transition-opacity" />
             </div>
@@ -26,7 +30,6 @@ export default function ProjectSection() {
                 {project.title}
               </CardTitle>
               <div className="pt-2">
-                {/* Clickable GitHub Link */}
                 <a 
                   href={project.link} 
                   target="_blank" 

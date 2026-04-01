@@ -1,4 +1,5 @@
 import { Facebook, Github, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 export default function HeroSection() {
   return (
@@ -11,7 +12,6 @@ export default function HeroSection() {
           I am a UI/UX Designer based in the Philippines, focusing on creating clean and user-friendly digital experiences.
         </p>
         
-        {/*"View My Work" Button*/}
         <a href="#project" className="inline-block">
           <button className="bg-[#001F3F] text-white px-8 py-3 rounded-md font-bold hover:bg-blue-900 transition-all shadow-lg active:scale-95">
             View My Work
@@ -23,16 +23,18 @@ export default function HeroSection() {
         <div className="relative aspect-square w-full max-w-[400px]">
           <div className="absolute inset-2 bg-gradient-to-br from-[#001F3F] to-blue-400 opacity-20 blur-xl animate-pulse rounded-full" />
           <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-2xl border-8 border-white dark:border-slate-800">
-            {/*Image Tag*/}
-            <img 
-              src={"/profile.jpg"} 
-              alt={"Kate Byancy Profile Picture"} 
-              className={"object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"} 
+            
+            <Image 
+              src="/profile.jpg" 
+              alt="Kate Byancy Profile Picture" 
+              fill 
+              priority 
+              sizes="(max-width: 768px) 100vw, 400px"
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-700" 
             />
           </div>
         </div>
 
-        {/*Social Icons Row*/}
         <div className="flex gap-6">
           <a href="https://www.facebook.com/KateByancy" target="_blank" rel="noopener noreferrer" 
              className="text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">
